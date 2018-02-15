@@ -3,7 +3,7 @@ import {AppRegistry, Platform, StyleSheet, Text, View} from 'react-native';
 
 import {styles} from '../config/styles.js';
 
-import {NightModeState} from '../components/NightMode.js';
+import {NightModeState} from '../components/NightMode';
 
 export class NightModeScreen extends Component {
   static navigationOptions = {
