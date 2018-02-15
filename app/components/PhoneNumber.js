@@ -24,7 +24,7 @@ export class PhoneNumber extends Component {
     return (
       <View style={styles.vsub}>
       <View style={styles.heading}>
-        <Text style={styles.heading}>{this.props.title}</Text>
+        <Text style={styles.h1}>{this.props.title}</Text>
       </View>
       <View style={styles.fullcontrol}>
         <TextInput textAlign={'center'} placeholder={'number'} onChangeText = {(text) => this.setState({number: text})} value={this.state.number} keyboardType="phone-pad"></TextInput>
