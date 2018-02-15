@@ -1,0 +1,11 @@
+patch-package
+--- a/node_modules/art/modes/fast-noSideEffects.js
++++ b/node_modules/art/modes/fast-noSideEffects.js
+@@ -1,6 +1,6 @@
+ var hasCanvas = function(){
+ 
+-  var canvas = document.createElement('canvas');
++  var canvas = (typeof document !== 'undefined')?document.createElement('canvas'):null;
+   return canvas && !!canvas.getContext;
+ 
+ };

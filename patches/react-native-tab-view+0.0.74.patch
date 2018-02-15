@@ -1,0 +1,23 @@
+patch-package
+deleted file mode 120000
+--- a/node_modules/react-native-tab-view/node_modules/.bin/react-native
++++ /dev/null
+@@ -1 +0,0 @@
+-../../../react-native/local-cli/wrong-react-native.js
+\ No newline at end of file
+--- a/node_modules/react-native-tab-view/src/TabViewPagerAndroid.js
++++ b/node_modules/react-native-tab-view/src/TabViewPagerAndroid.js
+@@ -1,10 +1,12 @@
+ /* @flow */
+ 
+ import * as React from 'react';
+-import { View, ViewPagerAndroid, StyleSheet, I18nManager } from 'react-native';
++import * as ReactNative from 'react-native';
+ import { PagerRendererPropType } from './TabViewPropTypes';
+ import type { PagerRendererProps } from './TabViewTypeDefinitions';
+ 
++const { View, ViewPagerAndroid, StyleSheet, I18nManager } = ReactNative;
++
+ type PageScrollEvent = {
+   nativeEvent: {
+     position: number,

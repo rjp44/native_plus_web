@@ -1,0 +1,31 @@
+patch-package
+--- a/node_modules/react-native-safe-area-view/index.js
++++ b/node_modules/react-native-safe-area-view/index.js
+@@ -1,5 +1,8 @@
+ import React, { Component } from 'react';
+-import {
++import ReactNative from 'react-native';
++import withOrientation from './withOrientation';
++
++const  {
+   DeviceInfo,
+   Dimensions,
+   InteractionManager,
+@@ -7,8 +10,9 @@ import {
+   Platform,
+   StyleSheet,
+   Animated,
+-} from 'react-native';
+-import withOrientation from './withOrientation';
++} = ReactNative;
++
++
+ 
+ // See https://mydevice.io/devices/ for device dimensions
+ const X_WIDTH = 375;
+deleted file mode 120000
+--- a/node_modules/react-native-safe-area-view/node_modules/.bin/react-native
++++ /dev/null
+@@ -1 +0,0 @@
+-../../../react-native/local-cli/wrong-react-native.js
+\ No newline at end of file
